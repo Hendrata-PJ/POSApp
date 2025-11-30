@@ -37,4 +37,14 @@ public class LoginController {
             errorLabel.setVisible(true);
         }
     }
+
+    @FXML
+    private void handleSignUp() {
+        try {
+            App.setRoot("signup");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
