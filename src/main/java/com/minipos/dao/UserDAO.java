@@ -31,4 +31,40 @@ public class UserDAO {
         }
         return null;
     }
+
+    public boolean userExists(String username) {
+        String sql = "SELECT * FROM users WHERE username = ?";
+        
+        try (Connection conn = DatabaseHelper.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean registerUser(String username, String password, String role) {
+        // Check if user already exists
+        if (userExists(username)) {
+            return false;
+        }
+
+        String sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+        
+        try (Connection conn = DatabaseHelper.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            pstmt.setString(3, role != null ? role : "cashier");
+            pstmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
 }
+
