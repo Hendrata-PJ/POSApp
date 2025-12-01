@@ -6,9 +6,9 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.minipos.controller.HistoryController"
-      spacing="20" style="-fx-padding: 20;">
+      spacing="20" style="-fx-padding: 20; -fx-background-color: #121212;">
 
-    <Label text="Transaction History" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Transaction History" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
 
     <TableView fx:id="historyTable" VBox.vgrow="ALWAYS">
         <columns>

@@ -7,11 +7,11 @@
 <HBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.minipos.controller.PosController"
-      spacing="20" style="-fx-padding: 20;">
+      spacing="20" style="-fx-padding: 20; -fx-background-color: #121212;">
 
     <!-- Left Side: Product Selection -->
     <VBox spacing="10" HBox.hgrow="ALWAYS">
-        <Label text="Cashier" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Label text="Cashier" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
         
         <HBox spacing="10">
             <TextField fx:id="searchField" promptText="Search product by name or code..." HBox.hgrow="ALWAYS"/>
@@ -56,10 +56,10 @@
         <Separator/>
         
         <HBox spacing="10" alignment="CENTER_LEFT">
-            <Label text="Discount (%):" />
+            <Label text="Discount (%):" style="-fx-text-fill: #e0e0e0;"/>
             <TextField fx:id="discountField" promptText="0" prefWidth="80"/>
             <Label text="Final Total:" style="-fx-font-size: 16px;"/>
-            <Label fx:id="totalLabel" text="Rp 0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+            <Label fx:id="totalLabel" text="Rp 0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: -fx-success-color;"/>
         </HBox>
         
         <Button text="Checkout" onAction="#handleCheckout" styleClass="button-primary" style="-fx-font-size: 18px; -fx-padding: 15;" maxWidth="Infinity"/>

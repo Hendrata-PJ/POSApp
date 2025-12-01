@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.minipos.controller.MainController"
+            prefHeight="700.0" prefWidth="1000.0"
+            style="-fx-background-color: #121212;">
+
+    <left>
+        <VBox styleClass="sidebar" spacing="5" prefWidth="200">
+            <Label text="MiniPOS" textFill="white" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 20 20;"/>
+            
+            <Button fx:id="btnDashboard" text="Dashboard" onAction="#showDashboard" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-tachometer-alt" iconColor="white"/>
+                </graphic>
+            </Button>
+            
+            <Button fx:id="btnPOS" text="POS (Cashier)" onAction="#showPOS" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-cash-register" iconColor="white"/>
+                </graphic>
+            </Button>
+            
+            <Button fx:id="btnProducts" text="Products" onAction="#showProducts" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-box" iconColor="white"/>
+                </graphic>
+            </Button>
+            
+            <Button fx:id="btnHistory" text="History" onAction="#showHistory" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-history" iconColor="white"/>
+                </graphic>
+            </Button>
+            
+            <Region VBox.vgrow="ALWAYS"/>
+            
+            <Button fx:id="btnDarkMode" text="Dark Mode" onAction="#toggleDarkMode" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-moon" iconColor="white"/>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnLogout" text="Logout" onAction="#logout" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-sign-out-alt" iconColor="white"/>
+                </graphic>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area">
+            <!-- Default Content (Dashboard) -->
+            <VBox spacing="20">
+                <Label text="Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
+                
+                <HBox spacing="20">
+                    <VBox styleClass="card" prefWidth="250">
+                        <Label text="Today's Sales" styleClass="card-title"/>
+                        <Label text="Rp 0" styleClass="card-value"/>
+                    </VBox>
+                    
+                    <VBox styleClass="card" prefWidth="250">
+                        <Label text="Low Stock Items" styleClass="card-title"/>
+                        <Label text="0" styleClass="card-value"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

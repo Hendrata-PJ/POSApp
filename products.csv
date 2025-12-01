@@ -1,0 +1,26 @@
+Code,Name,Price,Stock,Category
+P001,Premium Coffee,25000,100,Beverage
+P002,Green Tea Latte,28000,50,Beverage
+P003,Cheese Cake,35000,20,Dessert
+P004,Mineral Water,5000,200,Beverage
+P005,Fried Rice Special,45000,30,Main Course
+P006,Beef Burger,55000,25,Main Course
+P007,French Fries,20000,40,Snack
+P008,Chocolate Muffin,18000,15,Dessert
+P009,Iced Lemon Tea,15000,80,Beverage
+P010,Spaghetti Carbonara,48000,20,Main Course
+P011,Cappuccino,30000,60,Beverage
+P012,Espresso,22000,75,Beverage
+P013,Hot Chocolate,27000,45,Beverage
+P014,Orange Juice,20000,50,Beverage
+P015,Apple Pie,32000,18,Dessert
+P016,Tiramisu,38000,12,Dessert
+P017,Grilled Chicken,52000,28,Main Course
+P018,Caesar Salad,35000,35,Main Course
+P019,Margherita Pizza,58000,22,Main Course
+P020,Nachos,25000,40,Snack
+P021,Onion Rings,18000,45,Snack
+P022,Ice Cream Sundae,28000,30,Dessert
+P023,Brownie,22000,25,Dessert
+P024,Club Sandwich,42000,32,Main Course
+P025,Chicken Wings,35000,38,Snack

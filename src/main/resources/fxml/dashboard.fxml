@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minipos.controller.DashboardController"
+      spacing="15" styleClass="content-area" style="-fx-background-color: #121212; -fx-padding: 20;">
+
+    <HBox spacing="15">
+        <VBox styleClass="card" prefWidth="220">
+            <Label text="Today's Sales" styleClass="card-title"/>
+            <Label fx:id="dailyRevenueLabel" text="Rp 0" styleClass="card-value"/>
+        </VBox>
+
+        <VBox styleClass="card" prefWidth="220">
+            <Label text="Transactions Today" styleClass="card-title"/>
+            <Label fx:id="transactionsCountLabel" text="0" styleClass="card-value"/>
+        </VBox>
+
+        <VBox styleClass="card" prefWidth="220">
+            <Label text="Avg. Ticket" styleClass="card-title"/>
+            <Label fx:id="avgTicketLabel" text="Rp 0" styleClass="card-value"/>
+        </VBox>
+
+        <VBox styleClass="card" prefWidth="220">
+            <Label text="Low Stock" styleClass="card-title"/>
+            <Label fx:id="lowStockLabel" text="0" styleClass="card-value"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="20">
+        <VBox spacing="10" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS" styleClass="card">
+            <Label text="Top Products (Today)" styleClass="card-title"/>
+            <TableView fx:id="topProductsTable">
+                <columns>
+                    <TableColumn text="Product" fx:id="colProdName" prefWidth="200"/>
+                    <TableColumn text="Qty" fx:id="colProdQty" prefWidth="80"/>
+                    <TableColumn text="Revenue" fx:id="colProdRevenue" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <VBox spacing="10" prefWidth="420" styleClass="card">
+            <Label text="Recent Transactions" styleClass="card-title"/>
+            <TableView fx:id="recentTransTable">
+                <columns>
+                    <TableColumn text="ID" fx:id="colTransId" prefWidth="60"/>
+                    <TableColumn text="Date" fx:id="colTransDate" prefWidth="180"/>
+                    <TableColumn text="Total" fx:id="colTransTotal" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Refresh" onAction="#loadMetrics" styleClass="button-primary"/>
+    </HBox>
+
+</VBox>

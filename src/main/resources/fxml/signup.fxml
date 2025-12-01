@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.minipos.controller.SignUpController"
+           prefHeight="600.0" prefWidth="800.0"
+           style="-fx-background-color: #121212;">
+
+    <VBox alignment="CENTER" spacing="15" maxWidth="400" styleClass="login-container">
+        <Label text="Create New Account" styleClass="login-title"/>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Username" style="-fx-text-fill: #e0e0e0;"/>
+            <TextField fx:id="usernameField" promptText="Choose a username (min 3 characters)"/>
+        </VBox>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Password" style="-fx-text-fill: #e0e0e0;"/>
+            <PasswordField fx:id="passwordField" promptText="Enter password (min 4 characters)"/>
+        </VBox>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Confirm Password" style="-fx-text-fill: #e0e0e0;"/>
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm password"/>
+        </VBox>
+
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Role" style="-fx-text-fill: #e0e0e0;"/>
+            <ComboBox fx:id="roleComboBox" prefWidth="Infinity"/>
+        </VBox>
+        
+        <Label fx:id="errorLabel" textFill="red" visible="false" wrapText="true"/>
+        <Label fx:id="successLabel" textFill="green" visible="false" wrapText="true"/>
+        
+        <Button text="Sign Up" onAction="#handleSignUp" styleClass="button-primary" maxWidth="Infinity"/>
+        
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Already have an account?" style="-fx-text-fill: #e0e0e0;"/>
+            <Button text="Back to Login" onAction="#handleBackToLogin" style="-fx-text-fill: #2196F3; -fx-background-color: transparent; -fx-cursor: hand;"/>
+        </HBox>
+    </VBox>
+
+</StackPane>

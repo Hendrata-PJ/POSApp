@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.minipos.controller.LoginController"
+           prefHeight="600.0" prefWidth="800.0"
+           style="-fx-background-color: #121212;">
+
+    <VBox alignment="CENTER" spacing="20" maxWidth="400" maxHeight="350" styleClass="login-container">
+        <Label text="MiniPOS Login" styleClass="login-title"/>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Username" style="-fx-text-fill: #e0e0e0;"/>
+            <TextField fx:id="usernameField" promptText="Enter username"/>
+        </VBox>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Password" style="-fx-text-fill: #e0e0e0;"/>
+            <PasswordField fx:id="passwordField" promptText="Enter password"/>
+        </VBox>
+        
+        <Label fx:id="errorLabel" textFill="red" visible="false"/>
+        
+        <Button text="Login" onAction="#handleLogin" styleClass="button-primary" maxWidth="Infinity"/>
+
+        <Separator/>
+
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Don't have an account?" alignment="CENTER" style="-fx-text-fill: #e0e0e0;"/>
+            <Button text="Create New Account" onAction="#handleSignUp" style="-fx-font-size: 12;" maxWidth="Infinity"/>
+        </VBox>
+    </VBox>
+
+</StackPane>

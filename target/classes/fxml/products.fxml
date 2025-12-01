@@ -8,13 +8,14 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.minipos.controller.ProductController"
-      spacing="20" style="-fx-padding: 20;">
+      spacing="20" style="-fx-padding: 20; -fx-background-color: #121212;">
 
     <HBox alignment="CENTER_LEFT" spacing="20">
-        <Label text="Product Management" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Label text="Product Management" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
         <Region HBox.hgrow="ALWAYS"/>
         <TextField fx:id="searchField" promptText="Search products..." prefWidth="250"/>
         <Button text="Search" onAction="#handleSearch" styleClass="button-primary"/>
+        <Button text="Import CSV" onAction="#handleImportCSV" styleClass="button-primary"/>
     </HBox>
 
     <HBox spacing="20">
@@ -32,7 +33,7 @@
                 <Button text="Save" onAction="#handleSave" styleClass="button-primary" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
                 <Button text="Clear" onAction="#handleClear" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
             </HBox>
-            <Button text="Delete" onAction="#handleDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" maxWidth="Infinity"/>
+            <Button text="Delete" onAction="#handleDelete" styleClass="button-danger" maxWidth="Infinity"/>
         </VBox>
 
         <!-- Product Table -->

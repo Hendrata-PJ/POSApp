@@ -7,28 +7,29 @@
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.minipos.controller.SignUpController"
-           prefHeight="600.0" prefWidth="800.0">
+           prefHeight="600.0" prefWidth="800.0"
+           style="-fx-background-color: #121212;">
 
     <VBox alignment="CENTER" spacing="15" maxWidth="400" styleClass="login-container">
         <Label text="Create New Account" styleClass="login-title"/>
         
         <VBox spacing="5" alignment="CENTER_LEFT">
-            <Label text="Username"/>
+            <Label text="Username" style="-fx-text-fill: #e0e0e0;"/>
             <TextField fx:id="usernameField" promptText="Choose a username (min 3 characters)"/>
         </VBox>
         
         <VBox spacing="5" alignment="CENTER_LEFT">
-            <Label text="Password"/>
+            <Label text="Password" style="-fx-text-fill: #e0e0e0;"/>
             <PasswordField fx:id="passwordField" promptText="Enter password (min 4 characters)"/>
         </VBox>
         
         <VBox spacing="5" alignment="CENTER_LEFT">
-            <Label text="Confirm Password"/>
+            <Label text="Confirm Password" style="-fx-text-fill: #e0e0e0;"/>
             <PasswordField fx:id="confirmPasswordField" promptText="Confirm password"/>
         </VBox>
 
         <VBox spacing="5" alignment="CENTER_LEFT">
-            <Label text="Role"/>
+            <Label text="Role" style="-fx-text-fill: #e0e0e0;"/>
             <ComboBox fx:id="roleComboBox" prefWidth="Infinity"/>
         </VBox>
         
@@ -38,7 +39,7 @@
         <Button text="Sign Up" onAction="#handleSignUp" styleClass="button-primary" maxWidth="Infinity"/>
         
         <HBox spacing="10" alignment="CENTER">
-            <Label text="Already have an account?"/>
+            <Label text="Already have an account?" style="-fx-text-fill: #e0e0e0;"/>
             <Button text="Back to Login" onAction="#handleBackToLogin" style="-fx-text-fill: #2196F3; -fx-background-color: transparent; -fx-cursor: hand;"/>
         </HBox>
     </VBox>

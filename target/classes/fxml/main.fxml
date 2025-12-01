@@ -8,7 +8,8 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.minipos.controller.MainController"
-            prefHeight="700.0" prefWidth="1000.0">
+            prefHeight="700.0" prefWidth="1000.0"
+            style="-fx-background-color: #121212;">
 
     <left>
         <VBox styleClass="sidebar" spacing="5" prefWidth="200">
@@ -40,6 +41,12 @@
             
             <Region VBox.vgrow="ALWAYS"/>
             
+            <Button fx:id="btnDarkMode" text="Dark Mode" onAction="#toggleDarkMode" styleClass="sidebar-button" maxWidth="Infinity">
+                <graphic>
+                    <FontIcon iconLiteral="fas-moon" iconColor="white"/>
+                </graphic>
+            </Button>
+
             <Button fx:id="btnLogout" text="Logout" onAction="#logout" styleClass="sidebar-button" maxWidth="Infinity">
                 <graphic>
                     <FontIcon iconLiteral="fas-sign-out-alt" iconColor="white"/>
@@ -52,7 +59,7 @@
         <StackPane fx:id="contentArea" styleClass="content-area">
             <!-- Default Content (Dashboard) -->
             <VBox spacing="20">
-                <Label text="Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+                <Label text="Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
                 
                 <HBox spacing="20">
                     <VBox styleClass="card" prefWidth="250">
