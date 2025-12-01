@@ -21,11 +21,8 @@ public class MainController {
 
     @FXML
     private void showDashboard() {
-        // For now, just clear and show default text (or reload dashboard FXML if we separate it)
-        contentArea.getChildren().clear();
-        // Re-add dashboard content manually or load from FXML
-        // For simplicity in this step, we'll just leave it empty or load a simple label
-        // In a real app, we'd load dashboard.fxml
+        // Load the dashboard.fxml into the content area
+        loadView("dashboard");
     }
 
     @FXML
